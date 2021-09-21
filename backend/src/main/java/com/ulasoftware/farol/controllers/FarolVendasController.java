@@ -1,8 +1,8 @@
 package com.ulasoftware.farol.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,10 +18,17 @@ import com.ulasoftware.farol.service.FarolVendasService;
 		@Autowired
 		private FarolVendasService service;
 		
-		@GetMapping
-		public ResponseEntity<List<FarolVendasDTO>> findAll(){
-			List<FarolVendasDTO> list = service.findAll();
-			return ResponseEntity.ok(list);
-		}
+		/*
+		 * @GetMapping public ResponseEntity<List<FarolVendasDTO>> findAll(){
+		 * List<FarolVendasDTO> list = service.findAll(); return
+		 * ResponseEntity.ok(list); }
+		 */
+		
+		// BUSCA POR PAGINAÇÃO A SER IMPLEMENTADA
+		
+		  @GetMapping public ResponseEntity<Page<FarolVendasDTO>> findAll(Pageable
+		  pageable){ Page<FarolVendasDTO> list = service.findAll(pageable); return
+		  ResponseEntity.ok(list); }
+		 
 
 }

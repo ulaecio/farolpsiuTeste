@@ -1,9 +1,8 @@
 package com.ulasoftware.farol.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.ulasoftware.farol.dto.FarolVendasDTO;
@@ -16,11 +15,20 @@ public class FarolVendasService {
 	@Autowired
 	private FarolVendasRepository repository;
 	
-	public List<FarolVendasDTO> findAll() {
-		List<FarolVendas> result = repository.findAll();
-		return result.stream().map(x -> new FarolVendasDTO(x)).collect(Collectors.toList());
+	/*
+	 * //BUSCA SEM PAGINAÇÃO public List<FarolVendasDTO> findAll() {
+	 * List<FarolVendas> result = repository.findAll(); return result.stream().map(x
+	 * -> new FarolVendasDTO(x)).collect(Collectors.toList());
+	 * 
+	 * }
+	 */
+		//	BUSCA POR PAGINAÇÃO A SER IMPLEMENTADA
 		
-	}
-
+		  public Page<FarolVendasDTO> findAll(Pageable pageable) { Page<FarolVendas>
+		  result = repository.findAll(pageable); return result.map(x -> new
+		  FarolVendasDTO(x));
+		  
+		  }
+		 
 
 }
