@@ -1,0 +1,27 @@
+.base-card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(24, 23, 23);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+@media (min-width: 576px) {
+    .base-card {
+        width: 350px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .base-card {
+        width: 350px;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .base-card {
+        width: 350px;
+        margin-top: 5%;
+    }
+}

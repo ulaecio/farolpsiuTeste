@@ -1,0 +1,22 @@
+.auth-container{
+    justify-content: space-around;
+}
+
+@media (min-width: 576px){
+    .auth-container{
+        width: 480px;
+    }
+    
+}
+
+@media (min-width: 768px){
+    .auth-container{
+        width: 550px;
+    }  
+}
+
+@media (min-width: 1200px){
+    .auth-container{
+        width: 550px;
+    }  
+}

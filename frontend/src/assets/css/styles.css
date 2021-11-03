@@ -1,0 +1,141 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+:root {
+    --color-primary: #ff8400fd;
+    --color-third: #5900fffd;
+    --primary-color: #ff8400bb;
+    --primary-hover-color: #91684483;
+    --ml: 50%;
+    --ml2: 50%;
+    --mb: -3%;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-third {
+    color: var(--color-primary) !important;
+}
+
+text-third:hover {
+    color: var(--primary-hover-color);
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mr {
+    margin-left: var(--ml2);
+    text-decoration: none;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.home-btn-order {
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    width: 235px;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: -0.015em;
+    color: #FFF;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-justify: initial;
+}
+
+.home-btn-order:hover {
+    background-color: var(--primary-hover-color);
+    color: #FFF;
+    transform: scale(1.01);
+}
+
+.spinner {
+    display: flex;
+    margin-left: var(--ml) !important;
+    margin-bottom: var(--mb) !important;
+}
+
+thead,
+tfoot {
+    background-color: #3f87a6;
+    color: #fff;
+}
+
+tbody {
+    background-color: #e4f0f5;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 5px 10px;
+}
+
+.a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.a:hover {
+    color: var(--primary-hover-color);
+}
+
+.base-input {
+    border-radius: 10px;
+    font-size: 1em;
+    letter-spacing: -0.0015em;
+    color: var(--color-primary)!important;
+    height: 50px;
+}
+
+.base-input::placeholder {
+    color: var(--primary-hover-color)!important;
+}
+
+@media (min-width: 576px) {
+    .footer {
+        flex-shrink: 0;
+        text-align: center;
+        font-size: 0.8em;
+    }
+}
